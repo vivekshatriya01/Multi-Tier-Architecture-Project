@@ -1,5 +1,5 @@
-AWS Multi-Tier Architecture Deployment Steps
-# This project deploys a three-tier architecture consisting of:
+# AWS Multi-Tier Architecture Deployment Steps
+This project deploys a three-tier architecture consisting of:
 
 # Web Tier (Nginx Web Server)
 # Application Tier (PHP Application Server)
@@ -15,6 +15,7 @@ multi-tier-vpc
 CIDR Block:
 10.0.0.0/16
 
+---------------------------------------------------------------------------------------------------------------------------
 Step 2: Create Subnets
 
 Public Subnets
@@ -41,6 +42,8 @@ db-subnet-a
 db-subnet-b
 10.0.112.0/20
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 Step 3: Create Route Tables
 
 Create:
@@ -53,6 +56,8 @@ public-subnet-b
 
 with:
 public-rt
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 4: Create Internet Gateway
 
@@ -68,6 +73,8 @@ Add Route:
 Target:
 Internet Gateway
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 5: Create RDS Subnet Group
 
 Create:
@@ -80,6 +87,8 @@ db-subnet-b
 Availability Zones:
 ap-south-1a
 ap-south-1b
+
+-------------------------------------------------------------------------------------------------------------------------------------
 
 Step 6: Create Amazon RDS
 
@@ -101,6 +110,8 @@ multi-tier-vpc
 Create database and copy:
 RDS Endpoint
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 7: Create Database EC2 Instance
 
 Launch EC2 Instance.
@@ -115,6 +126,8 @@ MYSQL 3306
 SSH 22
 Launch Instance.
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 8: Connect Database
 
 Install MySQL Client:-
@@ -127,6 +140,8 @@ Create Database:-
 CREATE DATABASE multitier;
 USE multitier;
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 9: Create Application Server
 
 Launch EC2:
@@ -137,6 +152,8 @@ Auto Assign Public IP = Enable
 
 Use existing:
 multi-tier-sg
+
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 10: Configure Application Server
 
@@ -180,6 +197,8 @@ Restart Services:-
 sudo systemctl restart nginx
 sudo systemctl restart php-fpm
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 Step 11: Create App AMI
 
 Create Image:
@@ -189,6 +208,8 @@ Disable:
 Reboot Instance
 
 Create Image.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 12: Create App Auto Scaling Group
 
@@ -218,6 +239,8 @@ ELB Health Check
 EBS Health Check
 60 Seconds Grace Period
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 13: Create Web Server
 
 Launch EC2:
@@ -228,6 +251,8 @@ Auto Assign Public IP = Enable
 
 Security Group:-
 multi-tier-sg
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 14: Configure Web Server
 
@@ -247,6 +272,7 @@ cd /usr/share/nginx/html
 Create Frontend:-
 sudo nano index.html
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 15: Configure Reverse Proxy
 
@@ -263,6 +289,8 @@ sudo nginx -t
 
 Reload:
 sudo systemctl reload nginx
+
+-------------------------------------------------------------------------------------------------------------------------------------
 Step 16: Create Web AMI
 
 Create Image:
@@ -271,6 +299,8 @@ web-ami
 Disable:
 Reboot Instance
 Create Image.
+
+-------------------------------------------------------------------------------------------------------------------------------------
 
 Step 17: Create Web Auto Scaling Group
 
@@ -307,6 +337,7 @@ Instance Scale Protection
 Monitoring
 Default Instance Warmup
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 Step 18: Access Application
 
