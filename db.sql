@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    dob DATE NOT NULL,
+    address TEXT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
