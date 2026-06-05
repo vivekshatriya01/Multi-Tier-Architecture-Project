@@ -14,6 +14,9 @@ multi-tier-vpc
 
 CIDR Block:
 10.0.0.0/16
+<img width="1918" height="1078" alt="vpc_created_successfully1 2" src="https://github.com/user-attachments/assets/679de334-affa-414b-a086-b3896a298895" />
+
+<img width="1918" height="1078" alt="your_vpc1 3" src="https://github.com/user-attachments/assets/054e0cc7-77aa-4a7e-9a2d-25dfd75c470f" />
 
 ---------------------------------------------------------------------------------------------------------------------------
 Step 2: Create Subnets
