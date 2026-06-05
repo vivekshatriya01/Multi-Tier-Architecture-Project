@@ -44,6 +44,9 @@ db-subnet-a
 10.0.96.0/20
 db-subnet-b
 10.0.112.0/20
+<img width="1918" height="1078" alt="subnets_created_successfully1 2" src="https://github.com/user-attachments/assets/4bb37d5d-b8a3-45e7-8fe7-9a334b3f92ee" />
+<img width="1918" height="1078" alt="edit_subnet_associations" src="https://github.com/user-attachments/assets/f7ea0e56-2eb9-4208-8924-e63b228771e7" />
+<img width="1917" height="1077" alt="explicit_subnet_associations" src="https://github.com/user-attachments/assets/529be154-c285-4a6c-8a83-fe0b7f5ae3ba" />
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -60,6 +63,11 @@ public-subnet-b
 with:
 public-rt
 
+<img width="1918" height="1078" alt="create_route_table1" src="https://github.com/user-attachments/assets/bcd4c319-b707-450d-a9fe-9e58ed0feea0" />
+<img width="1918" height="1078" alt="public_rt(route_table)" src="https://github.com/user-attachments/assets/64cc3bad-0d31-4c24-a836-efddd1796cb0" />
+<img width="1918" height="1078" alt="edit_routes_public_rt" src="https://github.com/user-attachments/assets/9a3fbf9b-2b30-4816-85b7-701f23498761" />
+<img width="1918" height="1078" alt="public_rt_routes" src="https://github.com/user-attachments/assets/7d07ea13-058e-4a2b-8bb7-c4bc30920ece" />
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 4: Create Internet Gateway
@@ -75,6 +83,10 @@ Add Route:
 
 Target:
 Internet Gateway
+
+<img width="1918" height="1078" alt="create_internet_gateway1" src="https://github.com/user-attachments/assets/f76aceef-8893-4c9b-935a-84fb94c513c4" />
+<img width="1918" height="1078" alt="successfully_created_internet_gateway_1 1" src="https://github.com/user-attachments/assets/50dddbba-f4c0-49a8-b343-cbee323ca37d" />
+<img width="1918" height="1078" alt="multi-tier-igw(internet-gateway)" src="https://github.com/user-attachments/assets/1f742056-17b8-4557-b9de-98c6ee821244" />
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -113,6 +125,10 @@ multi-tier-vpc
 Create database and copy:
 RDS Endpoint
 
+<img width="1918" height="1078" alt="rds_created_successfully" src="https://github.com/user-attachments/assets/f45e663c-67d9-4c75-a822-f41dc227b1f4" />
+<img width="1918" height="1078" alt="rds_inbound_rules(3306)" src="https://github.com/user-attachments/assets/a8c03279-dd02-4e2b-87c7-89b3683d8cea" />
+<img width="1918" height="1078" alt="rds_inbound_rules_successfully(3306)" src="https://github.com/user-attachments/assets/98f83627-fdf0-4795-946a-f6c385a8235c" />
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 Step 7: Create Database EC2 Instance
@@ -142,6 +158,8 @@ mysql -u root -p -h <RDS-ENDPOINT>
 Create Database:-
 CREATE DATABASE multitier;
 USE multitier;
+
+<img width="1918" height="1078" alt="db_instance_git" src="https://github.com/user-attachments/assets/aaa04a90-9768-4ae8-9eab-d8bf9c043b95" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
