@@ -103,6 +103,9 @@ Availability Zones:
 ap-south-1a
 ap-south-1b
 
+<img width="1672" height="941" alt="db-subnet-group" src="https://github.com/user-attachments/assets/04cd4f82-6625-4419-8e1f-421f37d241e9" />
+
+
 -------------------------------------------------------------------------------------------------------------------------------------
 
 Step 6: Create Amazon RDS
