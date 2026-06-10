@@ -1,6 +1,8 @@
 # AWS Multi-Tier Architecture Deployment Steps
 This project deploys a three-tier architecture consisting of:
 
+<img width="6450" height="6188" alt="Multi-Tier architecture diagram(AWS)" src="https://github.com/user-attachments/assets/cca8f770-75c1-4768-aa7b-310c11d0a7c4" />
+
 # Web Tier (Nginx Web Server)
 # Application Tier (PHP Application Server)
 # Database Tier (Amazon RDS MySQL)
